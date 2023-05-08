@@ -1,11 +1,3 @@
-<?php
-$todo_string = file_get_contents('todo-list.json');
-$todo_array = json_decode($todo_string, true);
-
-var_dump($todo_array);
-?>
-
-
 <!doctype html>
 <html lang='en'>
 
@@ -17,6 +9,8 @@ var_dump($todo_array);
 
 <body>
    <div id='app'>
+
+      <h1>ToDo List</h1>
 
    </div>
 
