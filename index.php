@@ -17,7 +17,18 @@
 <body>
    <div id='app'>
 
-      <h1>ToDo List</h1>
+
+      <div class="container">
+         <h1>ToDo List</h1>
+
+         <ul>
+            <li v-for="task in tasks">
+               {{task}}
+            </li>
+         </ul>
+         <input class="form-control" type="text" placeholder="Add a task" v-model="new_task" @keyup.enter="addTask">
+      </div>
+
 
    </div>
 

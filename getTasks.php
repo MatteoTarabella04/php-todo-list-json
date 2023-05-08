@@ -1,8 +1,8 @@
 <?php
-$todo_string = file_get_contents('todo-list.json');
-$todo_array = json_decode($todo_string, true);
+
+$tasks_string = file_get_contents('tasks.json');
+
+$tasks = json_decode($tasks_string, true);
 
 header('Content-Type: application/json');
-
-var_dump($todo_array);
-?>
+echo $tasks_string;
