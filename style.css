@@ -1,0 +1,14 @@
+body {
+   background-color: #1b214b;
+}
+
+h1 {
+   font-size: 5rem;
+   margin: 1.5rem 0;
+}
+
+ul li:hover {
+   background-color: #c5aae9;
+   cursor: pointer;
+
+}
