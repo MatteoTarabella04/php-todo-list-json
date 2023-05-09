@@ -32,7 +32,9 @@
                         @click="doneTask(i)">
                         {{task.name}}
                      </p>
-                     <button class="btn bg-danger"><i class="fa fa-trash text-white" aria-hidden="true"></i></button>
+                     <button class="btn bg-danger" @click="deleteTask(i)">
+                        <i class="fa fa-trash text-white" aria-hidden="true"></i>
+                     </button>
                   </li>
                </ul>
             </div>
