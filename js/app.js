@@ -3,8 +3,8 @@ const { createApp } = Vue;
 createApp({
    data() {
       return {
-         api_url: "./getTasks.php",
-         api_store_url: "./storeTasks.php",
+         api_index_url: "../app/Http/Controllers/TasksController/index.php",
+         api_store_url: "../app/Http/Controllers/TasksController/store.php",
          tasks: [],
          new_task: "",
       };
@@ -32,7 +32,7 @@ createApp({
    },
    mounted() {
       axios
-         .get(this.api_url)
+         .get(this.api_index_url)
          .then((response) => {
             console.log(response);
             this.tasks = response.data;

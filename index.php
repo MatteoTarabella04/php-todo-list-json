@@ -27,7 +27,9 @@
             <div class="my_list">
                <ul class="list-group">
                   <li class="list-group-item d-flex justify-content-between align-items-center" v-for="task in tasks">
-                     {{task}}
+                     <p :class="{ 'text-decoration-line-through': task.done }">
+                        {{task.name}}
+                     </p>
                      <button class="btn bg-danger"><i class="fa fa-trash text-white" aria-hidden="true"></i></button>
                   </li>
                </ul>

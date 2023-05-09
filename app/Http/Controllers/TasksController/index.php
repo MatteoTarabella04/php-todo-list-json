@@ -1,6 +1,8 @@
 <?php
 
-$tasks_string = file_get_contents('tasks.json');
+$json_path = '../../../../data/tasks.json';
+
+$tasks_string = file_get_contents($json_path);
 
 $tasks = json_decode($tasks_string, true);
 
