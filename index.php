@@ -26,8 +26,10 @@
          <div class="card border-0 w-25 m-auto">
             <div class="my_list">
                <ul class="list-group">
-                  <li class="list-group-item d-flex justify-content-between align-items-center" v-for="task in tasks">
-                     <p :class="{ 'text-decoration-line-through': task.done }">
+                  <li class="list-group-item d-flex justify-content-between align-items-center"
+                     v-for="(task, i) in tasks">
+                     <p type="button" class="m-0" :class="{ 'text-decoration-line-through': task.done }"
+                        @click="doneTask(i)">
                         {{task.name}}
                      </p>
                      <button class="btn bg-danger"><i class="fa fa-trash text-white" aria-hidden="true"></i></button>
