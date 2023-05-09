@@ -3,10 +3,11 @@ const { createApp } = Vue;
 createApp({
    data() {
       return {
-         api_index_url: "../app/Http/Controllers/TasksController/index.php",
-         api_store_url: "../app/Http/Controllers/TasksController/store.php",
+         api_index_url: "app/Http/Controllers/TasksController/index.php",
+         api_store_url: "app/Http/Controllers/TasksController/store.php",
+         api_update_url: "app/Http/Controllers/TasksController/updateTasks.php",
          tasks: [],
-         new_task: "",
+         new_task: '',
       };
    },
    methods: {
@@ -23,11 +24,29 @@ createApp({
             })
             .then((response) => {
                console.log(response);
+               this.tasks = response.data;
             })
             .catch((error) => {
                console.error(error.message);
             });
          this.new_task = "";
+      },
+      doneTask(i) {
+         const data = {
+            taskIndex: i,
+         };
+
+         axios
+            .post(this.api_update_url, data, {
+               headers: { "Content-Type": "multipart/form-data" },
+            })
+            .then((response) => {
+               console.log(response);
+               this.tasks = response.data;
+            })
+            .catch((error) => {
+               console.error(error.message);
+            });
       },
    },
    mounted() {
