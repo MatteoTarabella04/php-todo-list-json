@@ -49,7 +49,7 @@
    <!-- vue -->
    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
    <!-- my JS -->
-   <script src='./app.js'></script>
+   <script src='./js/app.js'></script>
    <!-- bs5 -->
    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js'></script>
 </body>
