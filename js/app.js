@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
    data() {
       return {
-         api_index_url: "../app/Http/Controllers/TasksController/index.php",
+         api_index_url: "../app/Http/Controllers/TasksController/getTasks.php",
          api_store_url: "../app/Http/Controllers/TasksController/store.php",
          tasks: [],
          new_task: "",
